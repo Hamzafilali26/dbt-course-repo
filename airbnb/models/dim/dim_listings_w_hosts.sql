@@ -6,8 +6,8 @@ l AS (
         {{ ref('dim_listings_cleansed') }}
 ),
 h AS (
-    SELECT * 
-    FROM {{ ref('dim_hosts_cleansed', v=2) }}
+    SELECT *
+    FROM {{ ref('dim_hosts_cleansed') }}
     -- We are only adding the `, v=2` part at the Model Versioning section
 )
 
